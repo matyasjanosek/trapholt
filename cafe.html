@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trapholt</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <style>
         * {
             font-family: 'Inter', sans-serif;
@@ -19,7 +21,9 @@
         <div class="absolute w-full h-full bg-black bg-opacity-50"></div>
         <nav id="navbar" class="relative flex lg:flex-row flex-col justify-between py-4 px-8 items-center lg:bg-transparent bg-[#272729]">
             <div class="lg:block flex justify-between lg:w-fit w-full">
-                <img class="h-7" src="img/Logo.svg" alt="Logo">
+                <a href="index.html">
+                    <img class="h-7 hover transition duration-300 ease-in-out hover:scale-110" src="img/Logo.svg" alt="LogoBlack">
+                </a>
                 <button id="toggleButton" class="lg:hidden text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-6 h-6 stroke-white">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -42,9 +46,9 @@
             </div>
         </nav>
         <div class="container mx-auto">
-            <div class="absolute top-1/2 -translate-y-1/2 lg:pl-0 pl-8">
+            <div class="relative flex flex-col lg:items-start items-center lg:px-8 lg:pt-40 pt-16">
                 <div class="">
-                    <svg id="caffe_logo" xmlns="http://www.w3.org/2000/svg" width="461.71" height="169.18" viewBox="0 0 520.677 190.787" class="lg:w-auto w-96 lg:mb-0 mb-12">
+                    <svg id="caffe_logo" xmlns="http://www.w3.org/2000/svg" width="461.71" height="169.18" viewBox="0 0 520.677 190.787" class="lg:w-auto w-80 mt-16">
                         <path id="Path_42" data-name="Path 42" d="M78.151,150.313H0V0H520.677V150.313H78.151m198.895-4.421h239.2V4.533H4.6V145.9H277.045Z" fill="#edebe7"/>
                         <path id="Path_43" data-name="Path 43" d="M167.279,71.831l26.58,42.312a28.4,28.4,0,0,0,.462-3.022c.034-6.3-.056-12.608.068-18.9.045-2.4-.553-3.462-3.18-3.981-8.909-1.793-14.412-7.33-16.487-16.217a9.158,9.158,0,0,1-.237-1.669,3.707,3.707,0,0,1,.169-.936c3.361-1.218,5.007-.282,5.9,3.372,1.624,6.665,6.5,10.443,13.442,11.074a9.672,9.672,0,0,0,.338-1.793c.023-8.108-.034-16.205.056-24.313.023-1.906-.553-2.842-2.492-3.237a29.413,29.413,0,0,1-5.413-1.827c-6.236-2.594-9.619-7.262-9.664-14.063-.045-7.206,3.169-12.687,9.732-15.653a27.333,27.333,0,0,1,22.295-.338c6.349,2.616,9.676,7.668,10.668,14.705h-4.6s-.271-.124-.327-.3c-3.8-11.458-17.863-15.878-27.956-8.965-5.83,3.992-7.217,16.239,1.286,19.622,4.026,1.6,8.4,2.346,12.63,3.406,3.045.767,6.191,1.2,9.18,2.143,6.8,2.154,11.2,6.541,11.864,13.939.688,7.544-1.613,14.029-8.289,17.908-3.958,2.3-8.661,3.315-13.657,5.154v31.847c-5.481,1.4-6.2,1.116-8.8-3.034q-16.713-26.744-33.459-53.476c-.451-.71-1.026-1.331-2.188-2.808v59.712H149.98v-66.4c5.627-1.59,6.845-1.139,9.71,3.5,2.481,4.015,4.984,8.029,7.6,12.247m48.345,3c2.91-11.142-4-19.058-15.968-18.258V84.507C206.738,84.236,212.376,81.992,215.635,74.831Z" transform="translate(19.154 2.609)" fill="#edebe7"/>
                         <path id="Path_44" data-name="Path 44" d="M249.688,26.835a27.528,27.528,0,0,0-6.27-.981c-4.6-.1-9.2-.034-14.063-.034v-4.5h46.451v4.432H255.541c-.068,1.353-.158,2.425-.158,3.507-.011,7.871.068,15.754-.056,23.626.045,4.184-.632,3.417,3.112,4.511C273.269,62.324,281.05,76.42,278.9,93.787c-2.289,18.494-14.175,28.9-32.839,28.791-5.729-.034-11.458,0-17.547,0V55.456c5.977,0,12.021-.2,18.032.09,3.71.158,3.293.632,3.282-3.09-.113-8.435-.056-16.871-.124-25.633m20.739,47.1c-3.124-6.157-7.668-10.533-15.111-12.27V88.013h-5.548V84.122c0-3.417-.09-23.378-.09-23.378s-5.548-1.274-15.641-.553v57.615c5.469,0,10.668.406,15.788-.09,9.642-.913,17.243-5.458,20.942-14.717,3.755-9.428,3.7-19.081-.327-29.072Z" transform="translate(29.184 2.723)" fill="#edebe7"/>
@@ -81,7 +85,7 @@
                     </svg>                                           
                 </div>
                 <div>
-                    <h2 class="text-white lg:text-4xl text-2xl font-bold lg:max-w-lg max-w-[22rem] mt-6">
+                    <h2 class="text-white lg:text-4xl text-xl font-bold lg:max-w-lg max-w-[18rem] mt-6">
                         Feels like a natural extension of you Trapholt experience.
                     </h2>
                 </div>
@@ -96,7 +100,7 @@
     <div class="bg-[#edebe7] pb-20">
         <div class="container mx-auto max-w-3xl">
             <div class="flex justify-center pt-20">
-                <svg id="caffe_logo_dark" xmlns="http://www.w3.org/2000/svg" width="461.71" height="169.18" viewBox="0 0 461.71 169.18" class="lg:w-full w-96 lg:mb-0 mb-12">
+                <svg id="caffe_logo_dark" xmlns="http://www.w3.org/2000/svg" width="461.71" height="169.18" viewBox="0 0 461.71 169.18" class="lg:w-full w-80 lg:mb-6 mb-12">
                     <path id="Path_71" data-name="Path 71" d="M69.3,133.29H0V0H461.71V133.29H69.3m176.37-3.92H457.78V4.02H4.08V129.38H245.67Z" fill="#272729"/>
                     <path id="Path_72" data-name="Path 72" d="M165.32,66.01l23.57,37.52a25.183,25.183,0,0,0,.41-2.68c.03-5.59-.05-11.18.06-16.76.04-2.13-.49-3.07-2.82-3.53-7.9-1.59-12.78-6.5-14.62-14.38a8.121,8.121,0,0,1-.21-1.48,3.287,3.287,0,0,1,.15-.83c2.98-1.08,4.44-.25,5.23,2.99,1.44,5.91,5.76,9.26,11.92,9.82a8.577,8.577,0,0,0,.3-1.59c.02-7.19-.03-14.37.05-21.56.02-1.69-.49-2.52-2.21-2.87a26.081,26.081,0,0,1-4.8-1.62c-5.53-2.3-8.53-6.44-8.57-12.47-.04-6.39,2.81-11.25,8.63-13.88a24.237,24.237,0,0,1,19.77-.3c5.63,2.32,8.58,6.8,9.46,13.04h-4.08s-.24-.11-.29-.27C203.9,25,191.43,21.08,182.48,27.21c-5.17,3.54-6.4,14.4,1.14,17.4,3.57,1.42,7.45,2.08,11.2,3.02,2.7.68,5.49,1.06,8.14,1.9,6.03,1.91,9.93,5.8,10.52,12.36.61,6.69-1.43,12.44-7.35,15.88-3.51,2.04-7.68,2.94-12.11,4.57v28.24c-4.86,1.24-5.5.99-7.8-2.69Q171.4,84.175,156.55,60.47c-.4-.63-.91-1.18-1.94-2.49v52.95h-4.63V52.05c4.99-1.41,6.07-1.01,8.61,3.1,2.2,3.56,4.42,7.12,6.74,10.86m42.87,2.66c2.58-9.88-3.55-16.9-14.16-16.19V77.25C200.31,77.01,205.31,75.02,208.2,68.67Z" fill="#272729"/>
                     <path id="Path_73" data-name="Path 73" d="M247.29,26.21a24.411,24.411,0,0,0-5.56-.87c-4.08-.09-8.16-.03-12.47-.03V21.32h41.19v3.93H252.48c-.06,1.2-.14,2.15-.14,3.11-.01,6.98.06,13.97-.05,20.95.04,3.71-.56,3.03,2.76,4,13.15,4.37,20.05,16.87,18.14,32.27-2.03,16.4-12.57,25.63-29.12,25.53-5.08-.03-10.16,0-15.56,0V51.59c5.3,0,10.66-.18,15.99.08,3.29.14,2.92.56,2.91-2.74-.1-7.48-.05-14.96-.11-22.73m18.39,41.77c-2.77-5.46-6.8-9.34-13.4-10.88V80.46h-4.92V77.01c0-3.03-.08-20.73-.08-20.73s-4.92-1.13-13.87-.49v51.09c4.85,0,9.46.36,14-.08,8.55-.81,15.29-4.84,18.57-13.05a33.423,33.423,0,0,0-.29-25.78Z" fill="#272729"/>
@@ -135,7 +139,7 @@
             <div class="lg:px-0 px-8">
                 <div>
                     <div class="flex items-center justify-between">
-                        <div class="flex space-x-2 text-[#CD0046] lg:text-3xl text-2xl font-semibold -mb-6">
+                        <div class="flex space-x-2 text-[#2A2F4F] lg:text-3xl text-xl font-semibold lg:-mb-6 -mb-6">
                             <h2>KAFFE</h2>
                             <h2>/</h2>
                             <h2>COFFEE</h2>
@@ -143,16 +147,16 @@
                         <div class="lg:-mr-2 -mr-5">
                             <svg id="Group_57" data-name="Group 57" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 96.042 96.042" class="lg:w-full w-4/5">
                                 <path id="Path_100" data-name="Path 100" d="M0,0H96.042V96.042H0Z" fill="none"/>
-                                <path id="Path_101" data-name="Path 101" d="M3,17c3.321,2.569,8.312,4.07,14.006,4,5.695.068,10.685-1.433,14.006-4s8.312-4.07,14.006-4c5.695-.068,10.685,1.433,14.006,4" transform="translate(9.005 39.021)" fill="none" stroke="#CD0046" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-                                <path id="Path_102" data-name="Path 102" d="M11,3a9.6,9.6,0,0,0-4,8,9.6,9.6,0,0,0,4,8" transform="translate(21.011 9.005)" fill="none" stroke="#e5beec" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-                                <path id="Path_103" data-name="Path 103" d="M15,3a9.6,9.6,0,0,0-4,8,9.6,9.6,0,0,0,4,8" transform="translate(33.018 9.005)" fill="none" stroke="#e5beec" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-                                <path id="Path_104" data-name="Path 104" d="M3,10H59.025V30.009A24.011,24.011,0,0,1,35.014,54.019h-8A24.011,24.011,0,0,1,3,30.009Z" transform="translate(9.005 30.018)" fill="none" stroke="#e5beec" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-                                <path id="Path_105" data-name="Path 105" d="M16.746,33.916a12.005,12.005,0,1,0,1.008-22.23" transform="translate(50.268 33.017)" fill="none" stroke="#e5beec" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+                                <path id="Path_101" data-name="Path 101" d="M3,17c3.321,2.569,8.312,4.07,14.006,4,5.695.068,10.685-1.433,14.006-4s8.312-4.07,14.006-4c5.695-.068,10.685,1.433,14.006,4" transform="translate(9.005 39.021)" fill="none" stroke="#2A2F4F" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+                                <path id="Path_102" data-name="Path 102" d="M11,3a9.6,9.6,0,0,0-4,8,9.6,9.6,0,0,0,4,8" transform="translate(21.011 9.005)" fill="none" stroke="#2A2F4F" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+                                <path id="Path_103" data-name="Path 103" d="M15,3a9.6,9.6,0,0,0-4,8,9.6,9.6,0,0,0,4,8" transform="translate(33.018 9.005)" fill="none" stroke="#2A2F4F" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+                                <path id="Path_104" data-name="Path 104" d="M3,10H59.025V30.009A24.011,24.011,0,0,1,35.014,54.019h-8A24.011,24.011,0,0,1,3,30.009Z" transform="translate(9.005 30.018)" fill="none" stroke="#2A2F4F" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+                                <path id="Path_105" data-name="Path 105" d="M16.746,33.916a12.005,12.005,0,1,0,1.008-22.23" transform="translate(50.268 33.017)" fill="none" stroke="#2A2F4F" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
                             </svg>
                         </div>
                     </div>
                     <div>
-                        <hr class="border-[#CD0046] border-2"/>
+                        <hr class="border-[#2A2F4F] border-2"/>
                     </div>
                 </div>
                 <div class="mt-4 mb-6">
@@ -196,21 +200,19 @@
 
                 <div>
                     <div class="flex items-center justify-between">
-                        <div class="flex space-x-2 text-[#CD0046] lg:text-3xl text-2xl font-semibold -mb-6">
-                            <h2>SODAVAND</h2>
-                            <h2>/</h2>
-                            <h2>SOFT DRINKS</h2>
+                        <div class="flex space-x-2 text-[#2A2F4F] lg:text-3xl text-xl font-semibold lg:-mb-6 -mb-3">
+                            <h2 class="lg:max-w-3xl max-w-[10rem]">SODAVAND / SOFT DRINKS</h2>
                         </div>
                         <div class="lg:-mr-3 -mr-5">
                             <svg id="Group_59" data-name="Group 59" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 96.042 96.042" class="lg:w-full w-4/5">
                                 <path id="Path_108" data-name="Path 108" d="M0,0H96.042V96.042H0Z" fill="none"/>
-                                <path id="Path_109" data-name="Path 109" d="M18.005,75.032H42.016a4,4,0,0,0,4-4V56.524A39.781,39.781,0,0,1,49.4,40.417l1.241-2.8a33,33,0,0,0,3.381-14.606V7a4,4,0,0,0-4-4H10A4,4,0,0,0,6,7V23.009A33.058,33.058,0,0,0,9.381,37.615l1.241,2.8A39.742,39.742,0,0,1,14,56.524V71.03a4,4,0,0,0,4,4Z" transform="translate(18.011 9.005)" fill="none" stroke="#e5beec" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
-                                <path id="Path_110" data-name="Path 110" d="M6,8H54.021" transform="translate(18.011 24.014)" fill="none" stroke="#CD0046" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+                                <path id="Path_109" data-name="Path 109" d="M18.005,75.032H42.016a4,4,0,0,0,4-4V56.524A39.781,39.781,0,0,1,49.4,40.417l1.241-2.8a33,33,0,0,0,3.381-14.606V7a4,4,0,0,0-4-4H10A4,4,0,0,0,6,7V23.009A33.058,33.058,0,0,0,9.381,37.615l1.241,2.8A39.742,39.742,0,0,1,14,56.524V71.03a4,4,0,0,0,4,4Z" transform="translate(18.011 9.005)" fill="none" stroke="#2A2F4F" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+                                <path id="Path_110" data-name="Path 110" d="M6,8H54.021" transform="translate(18.011 24.014)" fill="none" stroke="#2A2F4F" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
                             </svg>                          
                         </div>
                     </div>
                     <div>
-                        <hr class="border-[#CD0046] border-2"/>
+                        <hr class="border-[#2A2F4F] border-2"/>
                     </div>
                 </div>
                 <div class="mt-4 mb-6">
@@ -254,28 +256,25 @@
 
                 <div>
                     <div class="flex items-center justify-between">
-                        <div class="flex space-x-2 text-[#CD0046] lg:text-3xl text-2xl font-semibold -mb-6">
-                            <h2>HOVEDRETTER</h2>
-                            <h2>/</h2>
-                            <h2>MAIN COURSES</h2>
+                        <div class="flex space-x-2 text-[#2A2F4F] lg:text-3xl text-xl font-semibold lg:-mb-6 -mb-3">
+                            <h2 class="lg:max-w-3xl max-w-[12rem]">HOVEDRETTER / MAIN COURSES</h2>
                         </div>
                         <div class="lg:-mr-2 -mr-4">
                             <svg id="Group_58" data-name="Group 58" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 98.042 98.042" class="lg:w-full w-4/5">
                                 <path id="Path_106" data-name="Path 106" d="M0,0H98.042V98.042H0Z" fill="none"/>
-                                <path id="Path_107" data-name="Path 107" d="M62.191,3V52.021H41.766C41.672,36.984,42.518,21.767,62.191,3Zm0,49.021V76.532H58.106V64.277M17.255,7.085V76.532M5,7.085V19.34a12.255,12.255,0,0,0,24.511,0V7.085" transform="translate(15.426 9.255)" fill="none" stroke="#CD0046" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+                                <path id="Path_107" data-name="Path 107" d="M62.191,3V52.021H41.766C41.672,36.984,42.518,21.767,62.191,3Zm0,49.021V76.532H58.106V64.277M17.255,7.085V76.532M5,7.085V19.34a12.255,12.255,0,0,0,24.511,0V7.085" transform="translate(15.426 9.255)" fill="none" stroke="#2A2F4F" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
                             </svg>                                                   
                         </div>
                     </div>
                     <div>
-                        <hr class="border-[#CD0046] border-2"/>
+                        <hr class="border-[#2A2F4F] border-2"/>
                     </div>
                 </div>
                 <div class="mt-4">
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="font-semibold">BRAISERET SVINEKÆBE</p>
-                            <p>Braiseret svinekæbe med variation af græskar</p>
-                            <p>Braised pork cheek with pumpkin variationg</p>
+                            <p class="lg:max-w-[24rem] max-w-[13rem]">Braiseret svinekæbe med variation af græskar / Braised pork cheek with pumpkin variationg</p>
                         </div>
                         <div>
                             <p class="font-semibold">160 DKK</p>
@@ -284,8 +283,7 @@
                     <div class="flex items-center justify-between mt-4">
                         <div>
                             <p class="font-semibold">PESTO RISOTTO</p>
-                            <p>Med mascarpone og ristede hasselnødder</p>
-                            <p>Either with air-dried ham or celeriac</p>
+                            <p class="lg:max-w-[22rem] max-w-[13rem]">Med mascarpone og ristede hasselnødder / Either with air-dried ham or celeriac </p>
                         </div>
                         <div>
                             <p class="font-semibold">150 DKK</p>
@@ -294,8 +292,7 @@
                     <div class="flex items-center justify-between mt-4">
                         <div>
                             <p class="font-semibold">SMØRSTEGT LYSSEJ</p>
-                            <p>Smørstegt lyssej m. danske kartofler, majs i brunet smør</p>
-                            <p>Butter-fried pollack with Danish potatoes, corn in browned butter</p>
+                            <p class="lg:max-w-[30rem] md:max-w-xl max-w-[14rem]">Smørstegt lyssej m. danske kartofler, majs i brunet smør / Butter-fried pollack with potatoes, corn in browned butter</p>
                         </div>
                         <div>
                             <p class="font-semibold">165 DKK</p>
@@ -304,28 +301,25 @@
                 </div>
                 <div>
                     <div class="flex items-center justify-between">
-                        <div class="flex space-x-2 text-[#CD0046] lg:text-3xl text-2xl font-semibold -mb-6">
-                            <h2>STUDENTERMÅLTIDER</h2>
-                            <h2>/</h2>
-                            <h2>STUDENT MEALS</h2>
+                        <div class="flex space-x-2 text-[#2A2F4F] lg:text-3xl text-xl font-semibold lg:-mb-6 -mb-3">
+                            <h2 class="lg:max-w-3xl max-w-[12rem]">STUDENTERMÅLTIDER / STUDENT MEALS</h2>
                         </div>
                         <div class="lg:-mr-2 -mr-4">
                             <svg id="Group_58" data-name="Group 58" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 98.042 98.042" class="lg:w-full w-4/5">
                                 <path id="Path_106" data-name="Path 106" d="M0,0H98.042V98.042H0Z" fill="none"/>
-                                <path id="Path_107" data-name="Path 107" d="M62.191,3V52.021H41.766C41.672,36.984,42.518,21.767,62.191,3Zm0,49.021V76.532H58.106V64.277M17.255,7.085V76.532M5,7.085V19.34a12.255,12.255,0,0,0,24.511,0V7.085" transform="translate(15.426 9.255)" fill="none" stroke="#CD0046" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+                                <path id="Path_107" data-name="Path 107" d="M62.191,3V52.021H41.766C41.672,36.984,42.518,21.767,62.191,3Zm0,49.021V76.532H58.106V64.277M17.255,7.085V76.532M5,7.085V19.34a12.255,12.255,0,0,0,24.511,0V7.085" transform="translate(15.426 9.255)" fill="none" stroke="#2A2F4F" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
                             </svg>                                                   
                         </div>
                     </div>
                     <div>
-                        <hr class="border-[#CD0046] border-2"/>
+                        <hr class="border-[#2A2F4F] border-2"/>
                     </div>
                 </div>
                 <div class="mt-4">
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="font-semibold">LENTIL PASTA</p>
-                            <p>Linsepasta, ristede grøntsager, nødder og parmesan</p>
-                            <p>Lentil pasta, roasted vegetables, nuts and parmesan</p>
+                            <p class="lg:max-w-[26rem] max-w-[15rem]">Linsepasta, ristede grøntsager, nødder og parmesan / <br>Lentil pasta, roasted vegetables, nuts and parmesan</p>
                         </div>
                         <div>
                             <p class="font-semibold">100 DKK</p>
@@ -334,8 +328,7 @@
                     <div class="flex items-center justify-between mt-4">
                         <div>
                             <p class="font-semibold">KYLLINGEBRYST MED QUINOA</p>
-                            <p>Kyllingebryst, quinoa, grøntsager, krydderurter og citrondressing</p>
-                            <p>Chicken breast, quinoa, vegetables, herbs and lemon dressing</p>
+                            <p class="lg:max-w-[32rem] max-w-[15rem]">Kyllingebryst, quinoa, grøntsager, krydderurter og citrondressing /<br> Chicken breast, quinoa, vegetables, herbs and lemon dressing </p>
                         </div>
                         <div>
                             <p class="font-semibold">100 DKK</p>
@@ -347,14 +340,19 @@
     </div>
 
     
-    <div class="bg-[#272729] pt-20 pb-6">
+    <div class="bg-[#272729] pt-20 pb-6 lg:px-8 md:px-8 px-0">
         <div class="container mx-auto">
             <div class="lg:grid lg:grid-cols-2 gap-2 md:grid-rows-1 lg:px-0 px-8">
                 <div>
-                    <img src="img/Logo.svg" alt="Logo" class="h-16">
+                    <img src="img/Logo.svg" alt="LogoWhite" class="h-16">
+                    <div class="flex space-x-4 items-center pt-4">
+                        <img src="img/indicators/kolding.png" alt="Kolding" class="h-[8rem]">
+                        <img src="img/indicators/michelin.webp" alt="Michelin" class="h-[7rem]">
+                        <img src="img/indicators/tripadvisor.png" alt="Tripadvisor" class="h-[7rem]">
+                    </div>
                 </div>
-                <div class="lg:flex justify-between pb-6 md:grid md:grid-rows-1 md:gap-y-12 lg:space-y-0 space-y-6">
-                    <ul class="text-white space-y-2 font-bold lg:mt-0 md:mt-4">
+                <div class="lg:flex justify-self-end justify-between pb-6 md:grid md:grid-rows-1 md:gap-y-12 lg:space-y-0 space-y-6 w-[38rem]">
+                    <ul class="text-white space-y-2 font-bold lg:mt-0 md:mt-4 w-1/2">
                         <li>
                             <a href="#" class="text-white font-bold">Adress</a>
                         </li>
@@ -367,6 +365,12 @@
                         <li>
                             <p class="font-extralight">6000 Kolding</p>
                         </li>
+                        <li class="pt-3">
+                            <a href="#" class="text-white font-bold">Telefon</a>
+                        </li>
+                        <li>
+                            <p class="font-extralight">+45 76 30 05 30</p>
+                        </li>
                     </ul>
                     <ul class="text-white space-y-2 font-bold">
                         <li>
@@ -377,8 +381,14 @@
                                 <li>Mon</li>
                                 <li>Tue-Sun</li>
                                 <li>Wed</li>
+                                <li class="pt-3">
+                                    <a href="#" class="text-white font-bold">Email</a>
+                                </li>
+                                <li>
+                                    <p class="font-extralight">kunstmuseum@trapholt.dk</p>
+                                </li>
                             </ul>
-                            <ul class="space-y-2 -ml-12 lg:ml-0 md:ml-0">
+                            <ul class="space-y-2 lg:ml-0 md:ml-0">
                                 <li>Closed</li>
                                 <li>10.00 - 17.00</li>
                                 <li>10.00 - 21.00</li>
@@ -407,12 +417,12 @@
                     </ul>
                 </div>
             </div>
-            <hr class="border-white pb-4 mt-8"/>
+            <hr class="border-white pb-4 mt-6"/>
             <span class="block text-sm text-white opacity-50 mt-2 text-center">
                 © 2023 Trapholt
             </span>
         </div>
-    </div> 
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var navbar = document.getElementById("navbar");
