@@ -16,6 +16,6 @@
     border-radius: 100vw;
 }
 
-* {
+.overflow {
     overflow-x: hidden;
 }
